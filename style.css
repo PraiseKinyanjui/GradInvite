@@ -1,0 +1,105 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(40%);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 0 20px white;
+  animation: fadeIn 2s ease forwards;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+.details {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+blockquote {
+  font-style: italic;
+  color: #ffd700;
+  margin: 20px 0;
+}
+
+.contact {
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overlay {
+    width: 90%;
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .details {
+    font-size: 1em;
+  }
+
+  blockquote {
+    font-size: 0.9em;
+  }
+
+  .contact {
+    font-size: 0.9em;
+  }
+}
